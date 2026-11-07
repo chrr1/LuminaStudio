@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Translucent Masking Tape */
+  .masking-tape {
+    background: rgba(240, 235, 220, 0.75);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-left: 1px dashed rgba(200, 190, 170, 0.4);
+    border-right: 1px dashed rgba(200, 190, 170, 0.4);
+  }
+  
+  .masking-tape-corner {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: rgba(235, 228, 208, 0.75);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  /* Receipt / Print perforated edge */
+  .perforated-border {
+    border-bottom: 2px dashed #D34826;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D34826;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BA3E1E;
+}
